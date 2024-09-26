@@ -9,7 +9,7 @@
 body{
   font-family: 'Nunito', sans-serif;
   font-size: 1rem;
-  background: whitesmoke;
+  background:#031D44;
 }
 
 button{
@@ -18,11 +18,95 @@ button{
   cursor: pointer;
   border: 1px solid lightgray;
   border-radius: 5px;
-  background: rgb(76, 92, 236);
+  background: #5B616A;
 }
 
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.6em 2em;
+  border: mediumspringgreen solid 0.15em;
+  border-radius: 0.25em;
+  color: mediumspringgreen;
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
+
+.button p {
+  z-index: 1;
+}
+
+.button:hover {
+  color: #212121;
+}
+
+.button:active {
+  border-color: teal;
+}
+
+.button {
+  --color: #00A97F;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+ .button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ .button:active {
+  filter: brightness(.8);
+ }
+ 
+
 button:hover{
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 255, 255);
 }
 
 .container{
@@ -30,7 +114,7 @@ button:hover{
   margin: auto;
 }
 
-header{background-color: #fff;}
+header{background-color: #04395E;}
 
 #header{
   display: flex;
@@ -38,12 +122,12 @@ header{background-color: #fff;}
   align-items: center;
   min-height: 70px;
   padding: 0 20px;
-  background: #fff;
+  background: #04395E;
 }
 
 #header button{
   font-family: inherit;
-  border: 1px solid rgb(248, 248, 248);
+  border: 1px solid rgb(253, 253, 253);
 }
 
 #create_card{
@@ -52,12 +136,12 @@ header{background-color: #fff;}
   margin:auto;
   padding: 20px;
   margin-top: 10px;
-  background: whitesmoke;
+  background: #04395E;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
 #create_card h2{
-  color: black;
+  color: #04395E;
   text-align: center;
 }
 
@@ -65,7 +149,7 @@ header{background-color: #fff;}
   width: 100%;
   border-radius: 5px;
   font-family: inherit;
-  border: 1px solid lightgray;
+  border: 1px solid #04395E;
   resize: none;
 }
 
@@ -87,9 +171,9 @@ header{background-color: #fff;}
   height: 200px;
   word-wrap: break-word;
   margin: 10px; 
-  background:#fff;
+  background:#04395E;
   cursor: pointer;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 2px 4px 0px rgba(90, 18, 18, 0.9);
   position: relative;
 }
 
@@ -99,11 +183,11 @@ header{background-color: #fff;}
   top: 3%;
   right: 2%;
   position: absolute;
-  color: #1a1a1a;
+  color: #04395E;
   transition: 0.3s ease-out;
 }
 
-.fa-minus:hover{color: red;}
+.fa-minus:hover{color: rgb(245, 245, 245);}
 
 @media(max-width:1280px){
   .container{width: 100%;}
